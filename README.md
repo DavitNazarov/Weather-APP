@@ -1,39 +1,8 @@
+# React + Vite
 
-## Demo
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Look for my code in the live demo.
+Currently, two official plugins are available:
 
-coming soon!
-## API Reference
-
-### Get all items
-#### Current weather API
-```http
-  GET https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
-```
-#### Sunrise, Sunset times API
-```http
-  GET  https://api.sunrise-sunset.org/json?lat={lat}&lng={lon}
-```
-
-## Appendix
-
-In this project, I Feth API from this webSite `https://openweathermap.org`,
-
-Also I use Free API from this webSite `https://sunrise-sunset.org/api`, 
-To show in the screen the sunrise and sunset details in each timezone or city.
-
-Please, Do not use my API key, you can generate it on your own, For free ! ! !
-## Deployment
-
-To deploy this project run
-
-```bash
-  npm run dev
-```
-
-
-## Screenshots
-coming soon!
-![App Screenshot]()
-
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh

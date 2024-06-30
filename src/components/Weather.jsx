@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import axios from "axios";
 import "../weather.css";
+import PropTypes from "prop-types";
+import { ToastContainer } from "react-toastify";
 
 const Weather = ({ userLocation }) => {
   const [data, setData] = useState([]);
@@ -16,25 +18,38 @@ const Weather = ({ userLocation }) => {
       })
       .catch((error) => {
         console.log(error);
-        toast.error("City not foud pleace type agein");
+        toast.error(error?.response?.data?.message);
       });
-  }, []);
+  }, [userLocation]);
   console.log(data);
   return (
     <div className="location_centr">
-      <div className=" weather_box">
-        <div>
-          <p className="name">
-            {data.name}, {data?.sys?.country}
-          </p>
+      {data.name ? (
+        <div className=" weather_box">
+          <div>
+            <div className="weather_image">
+              <img
+                src={`https://openweathermap.org/img/wn/${data?.weather[0]?.icon}@4x.png`}
+                alt=""
+              />
+            </div>
+            <h1 className="temp"> {data?.main?.temp.toFixed()}℃ </h1>
+            <p className="name">
+              {data.name}, {data?.sys?.country}
+            </p>
+            <div></div>
+          </div>
+          <div className="flex"></div>
         </div>
-        <div className="flex">
-          <h1 className="temp"> {data?.main?.temp.toFixed()}℃ </h1>
-          <img src="  https://openweathermap.org/img/wn/10d@4x.png" alt="" />
-        </div>
-      </div>
+      ) : (
+        <ToastContainer />
+      )}
     </div>
   );
 };
 
 export default Weather;
+
+Weather.propTypes = {
+  userLocation: PropTypes.string.isRequired,
+};

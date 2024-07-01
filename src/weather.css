@@ -19,7 +19,7 @@
 }
 ._conteiner{
     background: linear-gradient(to bottom right, #7A7FBA, #11C37C);
-    height: 100vh;
+    height: 200vh;
     padding-top: 80px;
 }
 .location_centr{
@@ -53,12 +53,38 @@
 }
 .flex{
     display: flex;
-    justify-content: center;
-    align-items: center;
+   
+}
+.justify-between{
+    justify-content:space-evenly ;
+    align-items: baseline;
+}
+.flex-col{
+    flex-direction: column;
 }
 .weather_image{
     text-align: center;
 }
 .weather_image image{
     width: 270px;
+}
+.sunshine{
+    padding-top: 2rem;
+    width: 100%
+}
+.sunFont{
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.optionalTxt{
+    font-size: 1.4rem;
+    padding: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.pt-10{
+    padding-top: 2rem;
+}
+
+.svg_size svg {
+    width: 100%;
 }

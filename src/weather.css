@@ -68,6 +68,9 @@
 .weather_image image{
     width: 270px;
 }
+.description{
+    font-family: cursive;
+}
 .sunshine{
     padding-top: 2rem;
     width: 100%

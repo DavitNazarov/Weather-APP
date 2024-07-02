@@ -7,6 +7,7 @@ import { ToastContainer } from "react-toastify";
 import { FaWind } from "react-icons/fa";
 import { LuWaves, LuSunrise, LuSunset } from "react-icons/lu";
 import { IconContext } from "react-icons";
+import Forecast from "./Forecast";
 
 const Weather = ({ userLocation }) => {
   const [data, setData] = useState([]);
@@ -52,6 +53,7 @@ const Weather = ({ userLocation }) => {
                 src={`https://openweathermap.org/img/wn/${data?.weather[0]?.icon}@4x.png`}
                 alt=""
               />
+              <p className="description">{data?.weather[0]?.description}</p>
             </div>
             <h1 className="temp"> {data?.main?.temp.toFixed()}℃ </h1>
             <p className="name">
@@ -110,6 +112,9 @@ const Weather = ({ userLocation }) => {
               </div>
             </div>
           </IconContext.Provider>
+          {Forecast && (
+            <Forecast lat={data?.coord?.lat} lon={data?.coord?.lon} />
+          )}
         </div>
       ) : (
         <ToastContainer />

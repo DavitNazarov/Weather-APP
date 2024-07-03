@@ -112,13 +112,11 @@ const Weather = ({ userLocation }) => {
               </div>
             </div>
           </IconContext.Provider>
-          {Forecast && (
-            <Forecast lat={data?.coord?.lat} lon={data?.coord?.lon} />
-          )}
         </div>
       ) : (
         <ToastContainer />
       )}
+      {Forecast && <Forecast lat={data?.coord?.lat} lon={data?.coord?.lon} />}
     </div>
   );
 };

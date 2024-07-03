@@ -2,6 +2,7 @@ import axios from "axios";
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
+import ForecastSlider from "../components/ForecastSlider";
 
 const Forecast = ({ lat, lon }) => {
   const [data, setData] = useState([]);
@@ -19,9 +20,8 @@ const Forecast = ({ lat, lon }) => {
         toast.error(error?.response?.data?.message);
       });
   }, [API]);
-  console.log(data);
 
-  return <div>Forecast</div>;
+  return <ForecastSlider list={data?.list} />;
 };
 
 export default Forecast;

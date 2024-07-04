@@ -92,3 +92,7 @@
 .svg_size svg {
     width: 100%;
 }
+hr{
+    height: 1px;
+    color: #7A7FBA;
+}

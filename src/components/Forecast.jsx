@@ -21,7 +21,7 @@ const Forecast = ({ lat, lon }) => {
       });
   }, [API]);
 
-  return <ForecastSlider list={data?.list} />;
+  return data ? <ForecastSlider list={data} /> : null;
 };
 
 export default Forecast;

@@ -59,6 +59,7 @@ const Weather = ({ userLocation }) => {
             <p className="name">
               {data.name}, {data?.sys?.country}
             </p>
+
             <div className="flex justify-between pt-10">
               <IconContext.Provider value={{ size: "3rem" }}>
                 <div className="flex">
@@ -77,6 +78,9 @@ const Weather = ({ userLocation }) => {
                 </div>
               </IconContext.Provider>
             </div>
+            {data.name && (
+              <Forecast lat={data?.coord?.lat} lon={data?.coord?.lon} />
+            )}
           </div>
           <IconContext.Provider value={{ size: "2rem" }}>
             <div className="flex justify-between sunshine">
@@ -116,7 +120,6 @@ const Weather = ({ userLocation }) => {
       ) : (
         <ToastContainer />
       )}
-      {Forecast && <Forecast lat={data?.coord?.lat} lon={data?.coord?.lon} />}
     </div>
   );
 };

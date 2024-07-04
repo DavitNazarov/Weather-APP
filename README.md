@@ -15,10 +15,10 @@ https://watherdavit.netlify.app
 ```http
   GET https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={api key }&units=metric`;
 ```
+
 ## Screenshots
 
 ![](https://i.ibb.co/88bNtY0/Screenshot-2024-07-04-131653.png)
-
 
 ## Deployment
 
@@ -27,4 +27,12 @@ To deploy this project run
 ```bash
   npm run dev
 ```
+
+
+## Features
+
+- Weather for any point in Earth.
+- Dynamic forecast.
+- Senset and senrise times.
+
 

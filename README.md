@@ -1,8 +1,30 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Demo
 
-Currently, two official plugins are available:
+Look for my code in the live demo.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+https://watherdavit.netlify.app
+## API Reference
+
+#### Get all items
+#### Current weather API
+```http
+  GET https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
+```
+#### Forecast  API
+```http
+  GET https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={api key }&units=metric`;
+```
+## Screenshots
+
+![](https://i.ibb.co/88bNtY0/Screenshot-2024-07-04-131653.png)
+
+
+## Deployment
+
+To deploy this project run
+
+```bash
+  npm run dev
+```
+
